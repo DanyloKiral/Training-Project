@@ -1,0 +1,37 @@
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\appsettings.json
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Contact book.exe
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Contact book.deps.json
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Contact book.runtimeconfig.json
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Contact book.runtimeconfig.dev.json
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Contact book.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\ref\Contact book.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Contact book.pdb
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.csprojAssemblyReference.cache
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.AssemblyInfoInputs.cache
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.AssemblyInfo.cs
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.csproj.CoreCompileInputs.cache
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\staticwebassets\Contact book.StaticWebAssets.Manifest.cache
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\staticwebassets\Contact book.StaticWebAssets.xml
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\scopedcss\bundle\Contact book.styles.css
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.RazorTargetAssemblyInfo.cache
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.csproj.CopyComplete
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\ref\Contact book.dll
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.pdb
+C:\Users\tkopanskyi\Documents\Training-Project\Training-Project Back-end\Contact book\Contact book\obj\Debug\net5.0\Contact book.genruntimeconfig.cache

@@ -1,4 +1,4 @@
-using ContactBook.API.Models;
+using ContactBook.API.Repositories;
 using ContactBook.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,8 +27,8 @@ namespace ContactBook.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ContactBook.API", Version = "v1" });
             });
 
-            services.AddSingleton<IAccountService, AccountService>();
-            services.AddSingleton<IAccountRepository, AccountRepository>();
+            services.AddTransient<IAccountService, AccountService>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

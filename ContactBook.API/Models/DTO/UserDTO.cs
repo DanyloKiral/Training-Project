@@ -1,6 +1,6 @@
-﻿namespace ContactBook.API.Models
+﻿namespace ContactBook.API.Models.Dto
 {
-    public class UserDTO
+    public class UserDto
     {
         public string FullName { get; set; }
         public string Role { get; set; }

@@ -1,16 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using ContactBook.API.Models;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace ContactBook.API.Models
+namespace ContactBook.API.Repositories
 {
     public class AccountRepository : IAccountRepository
     {
-        private List<User> users;
+        private readonly List<User> _users;
 
         public AccountRepository()
         {
-            users = new List<User>();
-            users.AddRange( new[]
+            _users = new List<User>
             {
                 new User
                 {
@@ -26,12 +26,12 @@ namespace ContactBook.API.Models
                     Email = "user@mail.com",
                     Password = "user"
                 }
-            });
+            };
         }
 
         public User GetUser(string email, string pass)
         {            
-            return users.FirstOrDefault(u => u.Email == email && u.Password == pass);
+            return _users.FirstOrDefault(u => u.Email == email && u.Password == pass);
         }
 
     }

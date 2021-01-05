@@ -1,9 +1,9 @@
-﻿using ContactBook.API.Models;
+﻿using ContactBook.API.Models.Dto;
 
 namespace ContactBook.API.Services
 {
     public interface IAccountService
     {
-        public UserDTO GetUser(string email, string pass);
+        public UserDto GetUser(string email, string pass);
     }
 }

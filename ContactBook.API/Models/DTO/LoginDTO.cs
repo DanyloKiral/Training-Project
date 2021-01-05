@@ -1,8 +1,8 @@
-﻿namespace ContactBook.API.Models.DTO
+﻿namespace ContactBook.API.Models.Dto
 {
-    public class LoginDTO
+    public class LoginDto
     {
         public string Email { get; set; }
-        public string Pass { get; set; }
+        public string Password { get; set; }
     }
 }

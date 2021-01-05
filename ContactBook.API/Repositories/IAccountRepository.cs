@@ -1,4 +1,6 @@
-﻿namespace ContactBook.API.Models
+﻿using ContactBook.API.Models;
+
+namespace ContactBook.API.Repositories
 {
     public interface IAccountRepository
     {

@@ -4,6 +4,6 @@ namespace ContactBook.API.Repositories
 {
     public interface IAccountRepository
     {
-        public User GetUser(string email, string pass);
+        User GetUser(string email, string pass);
     }
 }

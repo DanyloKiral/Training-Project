@@ -4,6 +4,6 @@ namespace ContactBook.API.Services
 {
     public interface IAccountService
     {
-        public UserDto GetUser(string email, string pass);
+        UserDto GetUser(string email, string pass);
     }
 }

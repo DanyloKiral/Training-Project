@@ -27,8 +27,8 @@ namespace ContactBook.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ContactBook.API", Version = "v1" });
             });
 
-            services.AddTransient<IAccountService, AccountService>();
-            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddSingleton<IAccountRepository, AccountRepository>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

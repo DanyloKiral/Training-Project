@@ -1,16 +1,31 @@
-﻿using ContactBook.API.Models;
+﻿using ContactBook.API.Models.DTO;
 using ContactBook.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ContactBook.API.Controllers
 {
+    [Route("api/account")]
     public class AccountController : Controller
     {
-        public User LogIn(string email, string pass)
+        private readonly IAccountService accountService;
+
+        public AccountController(IAccountService service)
         {
-            var user = DataService.GetUser(email, pass);
-            
-            return user;
+            accountService = service;
+        }
+
+        [HttpPost]
+        [Route("login")]
+        public IActionResult LogIn([FromBody] LoginDTO loginDTO)
+        {
+            var userDTO = accountService.GetUser(loginDTO.Email, loginDTO.Pass);
+
+            if (userDTO == null)
+            {
+                return Unauthorized("Incorrect email or password");
+            }
+
+            return Ok(userDTO);
         }
     }
 }

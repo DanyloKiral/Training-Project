@@ -1,3 +1,5 @@
+using ContactBook.API.Repositories;
+using ContactBook.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,12 +21,14 @@ namespace ContactBook.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ContactBook.API", Version = "v1" });
             });
+
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddSingleton<IAccountRepository, AccountRepository>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

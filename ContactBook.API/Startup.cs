@@ -28,7 +28,9 @@ namespace ContactBook.API
             });
 
             services.AddScoped<IAccountService, AccountService>();
-            services.AddSingleton<IAccountRepository, AccountRepository>();            
+            services.AddSingleton<IAccountRepository, AccountRepository>();
+            services.AddScoped<ICountryService, CountryService>();
+            services.AddSingleton<ICountryRepository, CountryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

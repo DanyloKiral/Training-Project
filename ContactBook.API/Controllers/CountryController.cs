@@ -14,7 +14,6 @@ namespace ContactBook.API.Controllers
         }
 
         [HttpGet]
-        [Route("countries")]
         public IActionResult GetCountries()
         {
             return Ok(_countryService.GetCountries());

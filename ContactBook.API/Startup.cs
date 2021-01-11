@@ -1,3 +1,4 @@
+using ContactBook.API.Middleware;
 using ContactBook.API.Repositories;
 using ContactBook.API.Services;
 using Microsoft.AspNetCore.Builder;
@@ -31,6 +32,8 @@ namespace ContactBook.API
             services.AddSingleton<IAccountRepository, AccountRepository>();
             services.AddScoped<ICountryService, CountryService>();
             services.AddSingleton<ICountryRepository, CountryRepository>();
+            services.AddScoped<IContactService, ContactService>();
+            services.AddSingleton<IContactRepository, ContactRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +47,7 @@ namespace ContactBook.API
             }
 
             app.UseRouting();
-
+            app.UseMiddleware<ErrorHandlerMiddleware>();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

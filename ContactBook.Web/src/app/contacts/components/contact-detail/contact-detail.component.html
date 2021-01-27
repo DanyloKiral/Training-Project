@@ -1,0 +1,138 @@
+<form *ngIf="contact" [formGroup]="contactDetailForm" class="example-form">
+  <table class="example-full-width" cellspacing="0">
+    <tr>
+      <td>
+        <div class="example-full-width">
+          <h4>First name</h4>
+          <input class="form-control" formControlName="firstName">
+        </div>
+      </td>
+      <td>
+        <div class="example-full-width">
+          <h4>Last Name</h4>
+          <input class="form-control" formControlName="lastName">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['firstName']}}
+          </span>
+        </div>
+      </td>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['lastName']}}
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="example-full-width">
+          <h4>Phone Number</h4>
+          <input class="form-control" formControlName="phoneNumber" placeholder="+xxxxxxxxxxxx">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['phoneNumber']}}
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="example-full-width">
+          <h4>Email</h4>
+          <input class="form-control" formControlName="email" placeholder="example@mail.com">
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['email']}}
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div>
+          <h4>Gender</h4>
+          <input id="male" type="radio" value="Male" formControlName="gender">
+          <label>Male</label>
+          <input id="female" type="radio" value="Female" formControlName="gender">
+          <label>Female</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['gender']}}
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div>
+          <h4>Country</h4>
+          <select class="form-control" formControlName="countryId">
+            <option *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
+          </select>
+        </div>
+      </td>
+      <td>
+        <div class="example-full-width">
+          <h4>City</h4>
+          <input class="form-control" formControlName="city" placeholder="Ex. San Francisco">
+        </div>
+      </td>
+      <td>
+        <div class="example-full-width">
+          <label>Address</label>
+          <textarea class="form-control" formControlName="address" placeholder="Ex. No. 28, 2 Laleh Street 3th Floor"></textarea>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['country']}}
+          </span>
+        </div>
+      </td>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['city']}}
+          </span>
+        </div>
+      </td>
+      <td class="errorMessage">
+        <div>
+          <span>
+            {{errorMessages['address']}}
+          </span>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <button class="btn btn-primary" [disabled]="!canSave" (click)="saveContact()">Save</button>
+    <button class="btn btn-secondary" (click)="onSaveComplete()">Cancel</button>
+  </div>
+
+</form>

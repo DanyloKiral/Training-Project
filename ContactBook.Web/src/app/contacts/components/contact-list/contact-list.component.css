@@ -1,0 +1,26 @@
+ul {
+  margin-top: 15px;
+}
+
+.selected {
+  background-color:lightsteelblue;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.first-flex-item {
+  flex-basis: 15%;
+}
+
+.flex-item {
+  flex-basis: 85%;
+}
+
+

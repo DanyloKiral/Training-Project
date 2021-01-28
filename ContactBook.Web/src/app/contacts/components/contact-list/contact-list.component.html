@@ -1,0 +1,14 @@
+<div class="flex-container">
+  <div class="first-flex-item">
+    <ul class="list-group">
+      <li class="list-group-item text" [routerLinkActive]="['selected']" *ngFor="let contact of contacts">
+        <a [routerLink]="['/contact', contact.id]">
+          {{contact.firstName + ' ' + contact.lastName}}
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="flex-item">
+    <router-outlet></router-outlet>
+  </div>
+</div>

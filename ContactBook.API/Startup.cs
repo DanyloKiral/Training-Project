@@ -28,6 +28,12 @@ namespace ContactBook.API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ContactBook.API", Version = "v1" });
             });
 
+            var allowedOrigins = Configuration.GetValue<string>("AllowedOrigins");
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins(allowedOrigins));
+            });
+
             services.AddScoped<IAccountService, AccountService>();
             services.AddSingleton<IAccountRepository, AccountRepository>();
             services.AddScoped<ICountryService, CountryService>();
@@ -45,6 +51,9 @@ namespace ContactBook.API
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ContactBook.API v1"));
             }
+
+            var allowedOrigins = Configuration.GetValue<string>("AllowedOrigins");
+            app.UseCors(options => options.WithOrigins(allowedOrigins).AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
             app.UseMiddleware<ErrorHandlerMiddleware>();

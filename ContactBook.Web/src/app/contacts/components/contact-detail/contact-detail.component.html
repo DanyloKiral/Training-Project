@@ -1,0 +1,106 @@
+<form *ngIf="contact" [formGroup]="contactDetailForm" class="form">
+  <table cellspacing="0">
+    <tr>
+      <td>
+        <h4>First name</h4>
+        <input formControlName="firstName" class="form-control">
+      </td>
+      <td>
+        <h4>Last Name</h4>
+        <input formControlName="lastName" class="form-control">
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['firstName']}}
+        </span>
+      </td>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['lastName']}}
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4>Phone Number</h4>
+        <input formControlName="phoneNumber" class="form-control" placeholder="+xxxxxxxxxxxx">
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['phoneNumber']}}
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4>Email</h4>
+        <input formControlName="email" class="form-control" placeholder="example@mail.com">
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['email']}}
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h4>Gender</h4>
+        <input formControlName="gender" value="Male" type="radio">
+        <label>Male</label>
+        <input formControlName="gender" value="Female" type="radio">
+        <label>Female</label>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['gender']}}
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td class="row-spacing">
+        <h4>Country</h4>
+        <select formControlName="countryId" class="form-control">
+          <option *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
+        </select>
+      </td>
+      <td class="row-spacing">
+        <h4>City</h4>
+        <input formControlName="city" class="form-control" placeholder="Ex. San Francisco">
+      </td>
+      <td class="row-spacing">
+        <h4>Address</h4>
+        <textarea formControlName="address" class="form-control"
+          placeholder="Ex. No. 28, 2 Laleh Street 3th Floor"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['country']}}
+        </span>
+      </td>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['city']}}
+        </span>
+      </td>
+      <td class="errorMessage">
+        <span>
+          {{errorMessages['address']}}
+        </span>
+      </td>
+    </tr>
+  </table>
+  <div>
+    <button class="btn btn-primary" [disabled]="!canSave" (click)="saveContact()">Save</button>
+    <button class="btn btn-secondary" (click)="onSaveComplete()">Cancel</button>
+  </div>
+</form>

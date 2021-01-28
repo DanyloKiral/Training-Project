@@ -1,5 +1,5 @@
 <form *ngIf="contact" [formGroup]="contactDetailForm" class="form">
-  <table cellspacing="0">
+  <table>
     <tr>
       <td>
         <h4>First name</h4>
@@ -13,12 +13,12 @@
     <tr>
       <td class="errorMessage">
         <span>
-          {{errorMessages['firstName']}}
+          {{errorMessages.firstName}}
         </span>
       </td>
       <td class="errorMessage">
         <span>
-          {{errorMessages['lastName']}}
+          {{errorMessages.lastName}}
         </span>
       </td>
     </tr>
@@ -31,7 +31,7 @@
     <tr>
       <td class="errorMessage">
         <span>
-          {{errorMessages['phoneNumber']}}
+          {{errorMessages.phoneNumber}}
         </span>
       </td>
     </tr>
@@ -44,23 +44,25 @@
     <tr>
       <td class="errorMessage">
         <span>
-          {{errorMessages['email']}}
+          {{errorMessages.email}}
         </span>
       </td>
     </tr>
     <tr>
       <td>
-        <h4>Gender</h4>
-        <input formControlName="gender" value="Male" type="radio">
-        <label>Male</label>
-        <input formControlName="gender" value="Female" type="radio">
-        <label>Female</label>
+        <div class="radio-button">
+          <h4>Gender</h4>
+          <input formControlName="gender" value="Male" type="radio">
+          <label>Male</label>
+          <input formControlName="gender" value="Female" type="radio">
+          <label>Female</label>
+        </div>
       </td>
     </tr>
     <tr>
       <td class="errorMessage">
         <span>
-          {{errorMessages['gender']}}
+          {{errorMessages.gender}}
         </span>
       </td>
     </tr>
@@ -84,23 +86,23 @@
     <tr>
       <td class="errorMessage">
         <span>
-          {{errorMessages['country']}}
+          {{errorMessages.country}}
         </span>
       </td>
       <td class="errorMessage">
         <span>
-          {{errorMessages['city']}}
+          {{errorMessages.city}}
         </span>
       </td>
       <td class="errorMessage">
         <span>
-          {{errorMessages['address']}}
+          {{errorMessages.address}}
         </span>
       </td>
     </tr>
   </table>
   <div>
-    <button class="btn btn-primary" [disabled]="!canSave" (click)="saveContact()">Save</button>
-    <button class="btn btn-secondary" (click)="onSaveComplete()">Cancel</button>
+    <button (click)="saveContact()" [disabled]="!canSave" class="btn btn-primary">Save</button>
+    <button (click)="onSaveComplete()" class="btn btn-secondary">Cancel</button>
   </div>
 </form>

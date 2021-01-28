@@ -1,7 +1,7 @@
 <div class="flex-container">
   <div class="first-flex-item">
     <ul class="list-group">
-      <li class="list-group-item text" [routerLinkActive]="['selected']" *ngFor="let contact of contacts">
+      <li *ngFor="let contact of contacts" [routerLinkActive]="['selected']" class="list-group-item text">
         <a [routerLink]="['/contact', contact.id]">
           {{contact.firstName + ' ' + contact.lastName}}
         </a>

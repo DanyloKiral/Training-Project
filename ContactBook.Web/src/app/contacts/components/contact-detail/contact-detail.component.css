@@ -35,11 +35,8 @@ span {
   padding: 0px;
 }
 
-input[type="radio"] {
+.radio-button label {
   margin-right: 10px;
-}
-
-input[value="Female"] {
   margin-left: 10px;
 }
 

@@ -3,13 +3,11 @@ import { ContactListComponent } from './components/contact-list/contact-list.com
 import { RouterModule, Routes } from '@angular/router';
 import { ContactDetailComponent } from './components/contact-detail/contact-detail.component';
 
-const routes: Routes =
-[
+const routes: Routes = [
   {
     path: '',
     component: ContactListComponent,
-    children:
-    [
+    children: [
       {
         path: ':id',
         component: ContactDetailComponent
@@ -19,12 +17,10 @@ const routes: Routes =
 ]
 
 @NgModule({
-  imports:
-  [
+  imports: [
     RouterModule.forChild(routes)
   ],
-  exports:
-  [
+  exports: [
     RouterModule
   ]
 })

@@ -1,11 +1,7 @@
-.example-form {
+.form {
   min-width: 150px;
-  max-width: 500px;
   width: 100%;
-}
-
-.example-full-width {
-  width: 100%;
+  margin-left: 30px;
 }
 
 td {
@@ -23,6 +19,10 @@ input.ng-invalid, select.ng-invalid, textarea.ng-invalid {
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
 }
 
+h4 {
+  margin-bottom: 15px;
+}
+
 span {
   width: 100%;
   margin-top: .25rem;
@@ -35,9 +35,12 @@ span {
   padding: 0px;
 }
 
-#male, #female {
-  margin-left: 10px;
+input[type="radio"] {
   margin-right: 10px;
+}
+
+input[value="Female"] {
+  margin-left: 10px;
 }
 
 button {
@@ -46,6 +49,13 @@ button {
 }
 
 textarea {
-  width: 200%;
+  width: 140%;
+}
+
+.row-spacing {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 

@@ -1,132 +1,101 @@
-<form *ngIf="contact" [formGroup]="contactDetailForm" class="example-form">
-  <table class="example-full-width" cellspacing="0">
+<form *ngIf="contact" [formGroup]="contactDetailForm" class="form">
+  <table cellspacing="0">
     <tr>
       <td>
-        <div class="example-full-width">
-          <h4>First name</h4>
-          <input class="form-control" formControlName="firstName">
-        </div>
+        <h4>First name</h4>
+        <input formControlName="firstName" class="form-control">
       </td>
       <td>
-        <div class="example-full-width">
-          <h4>Last Name</h4>
-          <input class="form-control" formControlName="lastName">
-        </div>
+        <h4>Last Name</h4>
+        <input formControlName="lastName" class="form-control">
       </td>
     </tr>
     <tr>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['firstName']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['firstName']}}
+        </span>
       </td>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['lastName']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['lastName']}}
+        </span>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="example-full-width">
-          <h4>Phone Number</h4>
-          <input class="form-control" formControlName="phoneNumber" placeholder="+xxxxxxxxxxxx">
-        </div>
+        <h4>Phone Number</h4>
+        <input formControlName="phoneNumber" class="form-control" placeholder="+xxxxxxxxxxxx">
       </td>
     </tr>
     <tr>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['phoneNumber']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['phoneNumber']}}
+        </span>
       </td>
     </tr>
     <tr>
       <td>
-        <div class="example-full-width">
-          <h4>Email</h4>
-          <input class="form-control" formControlName="email" placeholder="example@mail.com">
-        </div>
+        <h4>Email</h4>
+        <input formControlName="email" class="form-control" placeholder="example@mail.com">
       </td>
     </tr>
     <tr>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['email']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['email']}}
+        </span>
       </td>
     </tr>
     <tr>
       <td>
-        <div>
-          <h4>Gender</h4>
-          <input id="male" type="radio" value="Male" formControlName="gender">
-          <label>Male</label>
-          <input id="female" type="radio" value="Female" formControlName="gender">
-          <label>Female</label>
-        </div>
+        <h4>Gender</h4>
+        <input formControlName="gender" value="Male" type="radio">
+        <label>Male</label>
+        <input formControlName="gender" value="Female" type="radio">
+        <label>Female</label>
       </td>
     </tr>
     <tr>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['gender']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['gender']}}
+        </span>
       </td>
     </tr>
     <tr>
-      <td>
-        <div>
-          <h4>Country</h4>
-          <select class="form-control" formControlName="countryId">
-            <option *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
-          </select>
-        </div>
+      <td class="row-spacing">
+        <h4>Country</h4>
+        <select formControlName="countryId" class="form-control">
+          <option *ngFor="let country of countries" [value]="country.id">{{country.name}}</option>
+        </select>
       </td>
-      <td>
-        <div class="example-full-width">
-          <h4>City</h4>
-          <input class="form-control" formControlName="city" placeholder="Ex. San Francisco">
-        </div>
+      <td class="row-spacing">
+        <h4>City</h4>
+        <input formControlName="city" class="form-control" placeholder="Ex. San Francisco">
       </td>
-      <td>
-        <div class="example-full-width">
-          <label>Address</label>
-          <textarea class="form-control" formControlName="address" placeholder="Ex. No. 28, 2 Laleh Street 3th Floor"></textarea>
-        </div>
+      <td class="row-spacing">
+        <h4>Address</h4>
+        <textarea formControlName="address" class="form-control"
+          placeholder="Ex. No. 28, 2 Laleh Street 3th Floor"></textarea>
       </td>
     </tr>
     <tr>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['country']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['country']}}
+        </span>
       </td>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['city']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['city']}}
+        </span>
       </td>
       <td class="errorMessage">
-        <div>
-          <span>
-            {{errorMessages['address']}}
-          </span>
-        </div>
+        <span>
+          {{errorMessages['address']}}
+        </span>
       </td>
     </tr>
   </table>
@@ -134,5 +103,4 @@
     <button class="btn btn-primary" [disabled]="!canSave" (click)="saveContact()">Save</button>
     <button class="btn btn-secondary" (click)="onSaveComplete()">Cancel</button>
   </div>
-
 </form>

@@ -26,6 +26,10 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
   public countries: Country[] = [];
   public errorMessage: string = '';
 
+  public get canSave() {
+    return this.contactDetailForm.dirty && this.contactDetailForm.valid;
+  }
+
   constructor(
     private contactService: ContactService,
     private countryService: CountryService,
@@ -35,13 +39,12 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
   ) {
     this.createForm();
 
-    let subscription = route.params.subscribe((params) => {
+    let subscription = route.params.subscribe(params => {
       const id = params['id'];
       this.contactChangeSubscribe(id);
     });
 
-    this.subscriptions[this.subscriptions.length + 1] = subscription;
-
+    this.subscriptions.push(subscription);
     this.getStaticData();
   }
 
@@ -49,12 +52,8 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
     this.valuesValidation();
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.subscriptions.forEach(element => element.unsubscribe());
-  }
-
-  public get canSave(): boolean {
-    return this.contactDetailForm.dirty && this.contactDetailForm.valid;
   }
 
   private createForm(): void {
@@ -71,9 +70,8 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
   }
 
   private contactChangeSubscribe(id: number): void {
-
     this.contactService.getContact(id).subscribe({
-      next: (contact) => {
+      next: contact => {
         this.contact = contact;
 
         this.contactDetailForm.setValue({
@@ -87,7 +85,7 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
           address: this.contact.address,
         });
       },
-      error: (error) => (this.errorMessage = error),
+      error: error => this.errorMessage = error
     });
 
     this.contactDetailForm.reset();
@@ -95,17 +93,14 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
 
   private getStaticData(): void {
     this.countryService.getCountries().subscribe({
-      next: (countries) => (this.countries = countries),
-      error: (error) => (this.errorMessage = error),
+      next: countries => this.countries = countries,
+      error: error => this.errorMessage = error
     });
   }
 
   private valuesValidation(): void {
-    this.contactDetailForm.valueChanges
-    .subscribe(
-      (value) => {
-        this.setMessage(this.contactDetailForm)
-      }
+    this.contactDetailForm.valueChanges.subscribe(
+      value => this.setMessage(this.contactDetailForm)
     );
   }
 
@@ -123,8 +118,7 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
   }
 
   public saveContact(): void {
-
-    const contact = {...this.contact, ...this.contactDetailForm.value};
+    const contact = { ...this.contact, ...this.contactDetailForm.value };
 
     this.contactService.updateContact(contact).subscribe({
       next: () => this.onSaveComplete(),

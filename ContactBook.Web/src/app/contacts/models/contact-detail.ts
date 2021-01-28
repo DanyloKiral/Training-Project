@@ -1,5 +1,4 @@
-export interface IContactDetail
-{
+export interface IContactDetail {
   id: number;
   firstName: string;
   lastName: string;
@@ -11,8 +10,7 @@ export interface IContactDetail
   address: string;
 }
 
-export class ContactDetail implements IContactDetail
-{
+export class ContactDetail implements IContactDetail {
   constructor(
     public id: number = 0,
     public firstName: string = '',

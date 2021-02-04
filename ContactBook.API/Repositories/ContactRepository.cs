@@ -90,14 +90,14 @@ namespace ContactBook.API.Repositories
             return true;
         }
 
-        public bool AddContact(Contact contact)
+        public int AddContact(Contact contact)
         {
             contact.Id = NewId;
             contact.UpdatedAt = DateTime.Now;
 
             _contacts.Add(contact.Id, contact);
 
-            return true;
+            return contact.Id;
         }
 
         public bool DeleteContact(int id)

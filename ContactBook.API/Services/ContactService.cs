@@ -74,7 +74,7 @@ namespace ContactBook.API.Services
             }
         }
 
-        public void AddContact(ContactDto contactDto)
+        public int AddContact(ContactDto contactDto)
         {
             var contact = new Contact
             {
@@ -88,7 +88,7 @@ namespace ContactBook.API.Services
                 Address = contactDto.Address
             };
 
-            _contactRepository.AddContact(contact);
+            return _contactRepository.AddContact(contact);
         }
 
         public void DeleteContact(int id)

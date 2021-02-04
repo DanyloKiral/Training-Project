@@ -8,7 +8,7 @@ namespace ContactBook.API.Services
         IEnumerable<ListContactDto> GetContacts();
         ContactDto GetContact(int id);
         void UpdateContact(ContactDto contactDto);
-        void AddContact(ContactDto contactDto);
+        int AddContact(ContactDto contactDto);
         void DeleteContact(int id);
     }
 }

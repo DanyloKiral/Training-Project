@@ -36,11 +36,11 @@ namespace ContactBook.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddContact([FromBody] ContactDto contact)
+        public int AddContact([FromBody] ContactDto contact)
         {
-            _contactService.AddContact(contact);
+            var newContactId = _contactService.AddContact(contact);
 
-            return Ok();
+            return newContactId;
         }
 
         [HttpDelete]

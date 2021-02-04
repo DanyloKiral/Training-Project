@@ -9,7 +9,7 @@ td {
   padding-right: 10px;
 }
 
-input.ng-invalid, select.ng-invalid, textarea.ng-invalid {
+.form-control.ng-dirty.ng-invalid {
     border-color: #dc3545;
     box-shadow: 0px 0px 5px 0px red;
     padding-right: calc(1.5em + .75rem);

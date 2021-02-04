@@ -23,4 +23,25 @@ ul {
   flex-basis: 85%;
 }
 
+.del-btn {
+  float: right;
+  box-shadow: none;
+  padding: 0px;
+}
+
+.del-btn i {
+  color: darkgray;
+}
+
+.del-btn i:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.add-btn {
+  align-self: center;
+  width: 100%;
+}
+
+
 

@@ -9,6 +9,10 @@ const routes: Routes = [
     component: ContactListComponent,
     children: [
       {
+        path: 'new',
+        component: ContactDetailComponent
+      },
+      {
         path: ':id',
         component: ContactDetailComponent
       }

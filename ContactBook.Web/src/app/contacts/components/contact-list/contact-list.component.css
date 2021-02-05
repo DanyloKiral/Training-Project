@@ -16,11 +16,32 @@ ul {
 }
 
 .first-flex-item {
-  flex-basis: 15%;
+  flex-basis: 13%;
 }
 
 .flex-item {
   flex-basis: 85%;
 }
+
+.del-btn {
+  float: right;
+  box-shadow: none;
+  padding: 0px;
+}
+
+.del-btn i {
+  color: darkgray;
+}
+
+.del-btn i:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.add-btn {
+  align-self: center;
+  width: 100%;
+}
+
 
 

@@ -8,7 +8,7 @@ namespace ContactBook.API.Repositories
         IEnumerable<Contact> GetContacts();
         Contact GetContact(int id);
         bool UpdateContact(Contact contact);
-        bool AddContact(Contact contact);
+        int AddContact(Contact contact);
         bool DeleteContact(int id);
     }
 }
